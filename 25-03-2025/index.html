@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel = "stylesheet" href = "styles.css">
+    <link rel = "stylesheet" href = "styles/index.css">
 </head>
 <body>
-    <header>
-        <img id = "icone" src = "images/Icone.png">
-        <a>TEXTO</a>
+    <header id = "topo">
+        <img id = "logo"src = "images/Saitama-Pensando.png" Alt = "Saitama Pensando">
+        <h1 id = "titulo">MEMORY GAME</h1>
     </header>
+
+    <h2 id = "nome">A</h2>
+
+    <div class = "menu-botoes">
+        <div class = "botao"
+             onmouseover = "mudarNomeMostrarNome('KAGUYA-SAMA: LOVE IS WAR')"
+             onmouseout = "esconderNome()"
+             onclick = "abrirJogo('KAGUYA-SAMA')">
+
+            <img id = "icone" src = "images/Kaguya-Sama.png" Alt = "Imagem Kaguya Sama">
+        </div>
+
+        <div class = "botao"
+             onmouseover = "mudarNomeMostrarNome('SOLO LEVELING')"
+             onmouseout = "esconderNome()"
+             onclick = "abrirJogo('SOLO-LEVELING')">
+
+            <img id = "icone" src = "images/Solo-Leveling.png" Alt = "Imagem Solo Leveling">
+        </div>
+
+        <div class = "botao"
+        onmouseover = "mudarNomeMostrarNome('JUJUTSU KAISEN')"
+        onmouseout = "esconderNome()"
+        onclick = "abrirJogo('JUJUTSU-KAISEN')">
+
+            <img id = "icone" src = "images/Jujutsu-Kaisen.png" Alt = "Imagem Jujutsu Kaisen">
+        </div>
+    </div>
+
+    <footer>
+        <h3 id = "rodape">Desenvolvimento: Alexandre Schimainda Stempinhaki</h3>
+    </footer>
+
+    <script>
+
+    function mudarNomeMostrarNome(nome){
+        const novo_nome = document.getElementById('nome');
+        novo_nome.innerText = nome;
+        novo_nome.style.visibility = 'visible';
+    }
+
+    function esconderNome(){
+        const nome = document.getElementById('nome');
+        nome.style.visibility = 'hidden';
+    }
+
+    function abrirJogo(tema){
+        localStorage.setItem("tema-escolhido", tema);
+        window.location.href = "jogo.html";
+    }
+
+    </script>
+    
+
 </body>
-</html>      
+</html>
