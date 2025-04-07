@@ -12,39 +12,27 @@ body{
     display: grid;
 
     grid-template-rows : 10vh 1fr 5vh;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     grid-template-areas:
-        'topo'
-        'centro'
-        'rodape';
-}
-
-#topo{
-    grid-area: topo;
-    max-height: 10vh;
-    min-width: 1fr;
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
-
-    grid-template-areas: 
-        'topo-esquerda topo-meio topo-direita';
-
-    background-color: #000000;
+        'topo-esquerda topo-meio topo-direita'
+        'centro-esquerda centro-meio centro-direita'
+        'rodape rodape rodape';
 }
 
 #topo-esquerda{
     grid-area: topo-esquerda;
-    display: flex;
-    align-items: center;
+    background-color: #000000;
 }
 
 #topo-meio{
     grid-area: topo-meio;
+    background-color: #00008B;
 }
 
 #topo-direita{
     grid-area: topo-direita;
+    background-color: #63625F;
 }
 
 main{
@@ -67,7 +55,7 @@ footer{
 #icone{
     height: auto;
     display: block;
-    size: clamp(12px, 2.5vh, 24px);
+    width: 10px;
 }
 
 select{
