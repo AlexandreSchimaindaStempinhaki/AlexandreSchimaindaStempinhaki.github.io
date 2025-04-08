@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: grid;
+
+    grid-auto-rows: 15vh 12vh 1fr 1fr 1fr 1fr 1fr 15vh 7vh;
+    grid-auto-columns: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    'titulo titulo titulo titulo'
+    'cabecario cabecario cabecario cabecario'
+    'date country agent informations'
+    'date1 country1 agent1 informations1'
+    'date2 country2 agent2 informations2'
+    'date3 country3 agent3 informations3'
+    'date4 country4 agent4 informations4'
+    'branco branco branco branco'
+    'planalto planalto planalto planalto'
+}
+
+#date{
+    grid-area: date;
+    background-color: blue;
+}
+
+#country{
+    grid-area: country;
+    background-color: pink;
+}
+
+#agent{
+    grid-area: agent;
+    background-color: yellow;
+}
+
+#informations{
+    grid-area: informations;
+    background-color: gray;
+}
+
+#date1{
+    grid-area: date1;
+    background-color: blue;
+}
+
+#country1{
+    grid-area: country1;
+    background-color: pink;
+}
+
+#agent1{
+    grid-area: agent1;
+    background-color: yellow;
+}
+
+#informations1{
+    grid-area: informations1;
+    background-color: gray;
+}
+
+#date2{
+    grid-area: date2;
+    background-color: blue;
+}
+
+#country2{
+    grid-area: country2;
+    background-color: pink;
+}
+
+#agent2{
+    grid-area: agent2;
+    background-color: yellow;
+}
+
+#informations2{
+    grid-area: informations2;
+    background-color: gray;
+}
+
+#date3{
+    grid-area: date3;
+    background-color: blue;
+}
+
+#country3{
+    grid-area: country3;
+    background-color: pink;
+}
+
+#agent3{
+    grid-area: agent3;
+    background-color: yellow;
+}
+
+#informations3{
+    grid-area: informations3;
+    background-color: gray;
+}
+
+#date4{
+    grid-area: date4;
+    background-color: blue;
+}
+
+#country4{
+    grid-area: country4;
+    background-color: pink;
+}
+
+#agent4{
+    grid-area: agent4;
+    background-color: yellow;
+}
+
+#informations4{
+    grid-area: informations4;
+    background-color: gray;
+}
+
+#titulo{
+    grid-area: titulo;
+    background-color: red;
+}
+
+#cabecario{
+    grid-area: cabecario;
+    background-color: darkmagenta;
+}
+
+#branco{
+    grid-area: branco;
+    background-color: white;
+}
+
+#planalto{
+    grid-area: planalto;
+    background-color: green;
+}
