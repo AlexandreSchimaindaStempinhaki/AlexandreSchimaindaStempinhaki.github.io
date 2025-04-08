@@ -7,14 +7,45 @@
     <link rel = "stylesheet" href = "styles.css">
 </head>
 <body>
-        <header id = "topo-esquerda"></header>   
-        <header id = "topo-meio"></header>
+        <header id = "topo-esquerda">
+            <button class = "botao-menu" onclick = "alternarMenu()"><h1>☰ Menu</h1></button>
+        </header>   
+        <header id = "topo-meio"><h1>Bem-Vindo</h1></header>
         <header id = "topo-direita"></header>
 
-    <main></main>
+        <nav class = "menu-lateral" id = "menu-lateral">
+            <ul>
+                <li onclick =  "redirecionar('alexandreschimaindastempinhaki.github.io/Home/')">
+                    <img id = "images-menu" src = "images/Home.png">
+                    <h1>Home</h1>
+                </li>
+                <li onclick = 'redirecionar("alexandreschimaindastempinhaki.github.io/Home/projects")'>
+                    <img id = "images-menu" src = "images/Projects.png">
+                    <h1>Projetos</h1>
+                </li>
+            </ul>
+        </nav>
+    <main>
+        <img id = "perfil" src = "images/Gaia.png">
+    </main>
 
     <footer>
         <h6 id = "rodape">&copy; Alexandre Schimainda Stempinhaki</h6>
     </footer>
+
+    <script>
+        function alternarMenu(){
+            const menu = document.getElementById('menu-lateral');
+            if(menu.style.visibility === 'hidden' || menu.style.visibility === null){
+                menu.style.visibility = 'visible';
+            } else {
+                menu.style.visibility = 'hidden';
+            }
+        }
+
+        function redirecionar(endereco){
+            window.location.href = endereco;
+        }
+    </script>
 </body>
 </html>

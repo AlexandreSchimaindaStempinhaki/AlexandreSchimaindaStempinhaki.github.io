@@ -6,6 +6,7 @@
 
 html, body{
     height: 100%;
+    background-color: #b5b5b5;
 }
 
 body{
@@ -16,32 +17,96 @@ body{
 
     grid-template-areas:
         'topo-esquerda topo-meio topo-direita'
-        'centro-esquerda centro-meio centro-direita'
+        'centro-esquerda centro-meio centro-meio'
         'rodape rodape rodape';
 }
 
 #topo-esquerda{
     grid-area: topo-esquerda;
-    background-color: #000000;
+    background-image: linear-gradient(to right, #000000, #00008B);
 }
 
 #topo-meio{
     grid-area: topo-meio;
     background-color: #00008B;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #topo-direita{
     grid-area: topo-direita;
-    background-color: #63625F;
+    background-image: linear-gradient(to right, #00008B, #000000);
 }
 
 main{
-    grid-area: centro;
+    grid-area: centro-meio;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#atividades{
+    position: absolute;
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 50vh;
+    background-color: #00008B;
+    border: 5px solid #000000;
+}
+
+.menu-lateral{
+    grid-area: centro-esquerda;
+    background-color: #3C3C3C;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    background-color: #00008B;
+    border-bottom: 5px solid #000000;
+    cursor: pointer;
+}
+
+li:hover{
+    opacity: 0.5;
+}
+
+#images-menu{
+    height: clamp(10px, 7vh, 50px);
+    width: auto;
+    padding-right: 1vw;
+}
+
+#perfil{
+    width: clamp(100px, 70vh, 500px);
+    height: auto;
+    border: 5px solid #000000;
+    border-radius: 50%;
+}
+
+@media (max-width: 800px){
+    .menu-lateral {
+        visibility: hidden;
+    }
+}
+
+.botao-menu{
+    background: none;
+    border: none;
+    z-index: 1000;
+    cursor:pointer; 
+    margin: 1vw;
 }
 
 footer{
     grid-area: rodape;
-    background-color: #000000;
+    background-image: linear-gradient(to right, #00008B, #000000, #00008B);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,13 +123,23 @@ footer{
     width: 10px;
 }
 
+h1{
+    font-size: (5px, 4vh, 35px);
+    color: #FFFFFF;
+    text-align: center;
+    flex: 1;
+}
+
 select{
-    width: auto;
-    height: 50px;
+    height: 15vh;
+    width: 30vw;
+    text-align: center;
+    font-size: clamp(10px, 3vw, 40px);
+    flex: 0.25;
+    margin-bottom: 60vh;
+    box-shadow: 5px 5px 5px #00008B;
     background-color: #63625F;
     color: #FFFFFF;
-    border-style: solid;
-    border-color: #00008B;
-    border-width: 5px;
-    border-radius: 20px;
+    border: 5px solid #000000;
+    border-radius: 10px;
 }

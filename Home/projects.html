@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+        <header id = "topo-esquerda">
+            <button class = "botao-menu" onclick = "alternarMenu()"><h1>☰ Menu</h1></button>
+        </header>   
+        <header id = "topo-meio"><h1>Bem-Vindo</h1></header>
+        <header id = "topo-direita"></header>
+
+        <nav class = "menu-lateral" id = "menu-lateral">
+            <ul>
+                <li onclick =  "redirecionar('index.html')">
+                    <img id = "images-menu" src = "images/Home.png">
+                    <h1>Home</h1>
+                </li>
+                <li onclick = "redirecionar('projects.html')">
+                    <img id = "images-menu" src = "images/Projects.png">
+                    <h1>Projetos</h1>
+                </li>
+            </ul>
+        </nav>
+
+    <main>
+        <select id = "mes" onchange = "filtrarPorMes()">
+            <option value = "0">Todos os meses</option>
+            <option value = "3" selected>Março</option>
+            <option value = "4">Abril</option>
+        </select>
+        <div id = "atividades">
+            <ul id = "lista-atividades">
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <h6 id = "rodape">&copy; Alexandre Schimainda Stempinhaki</h6>
+    </footer>
+
+    <script>
+        function alternarMenu(){
+            const menu = document.getElementById('menu-lateral');
+            if(menu.style.visibility === 'hidden' || menu.style.visibility === ''){
+                menu.style.visibility = 'visible';
+            } else {
+                menu.style.visibility = 'hidden';
+            }
+        }
+
+        function redirecionar(endereco){
+            window.location.href = endereco;
+        }
+
+        const atividades = [
+            {
+                nome: "Currículo",
+                data: "2025-03-11",
+                imagem: "images/Curriculum.png",
+                link: "https://alexandreschimaindastempinhaki.github.io/11-03-2025/"
+            },
+
+            {
+                nome: "Site de Notícias",
+                data: "2025-03-18",
+                imagem: "images/Notice.png",
+                link: "https://alexandreschimaindastempinhaki.github.io/18-03-2025/"
+            },
+
+            {
+                nome: "Jogo da Memória",
+                data: "2025-03-25",
+                imagem: "images/Memory.png",
+                link: "https://alexandreschimaindastempinhaki.github.io/25-03-2025/"
+            }
+        ];
+
+        function filtrarPorMes(){
+            const select = document.getElementById("mes");
+            const mesSelecionado = parseInt(select.value);
+            const lista = document.getElementById("lista-atividades");
+            lista.innerHTML = "";
+
+            const atividadesFiltradas = atividades.filter((atividade) => {
+                const data = new Date(atividade.data);
+                const mes = data.getMonth() + 1;
+                return mesSelecionado === 0 || mes === mesSelecionado;
+            });
+
+            atividadesFiltradas.forEach((atividade) => {
+                const li = document.createElement("li");
+
+                li.onclick = () => {
+                    window.open(atividade.link, '_blank');
+                }
+                li.innerHTML = 
+            `
+            <img id = "images-menu" src = "${atividade.imagem}" alt="${atividade.nome}">
+            <h1>${atividade.nome}</h1>
+            `
+
+            lista.appendChild(li);
+            });
+        }
+        window.onload = filtrarPorMes();
+    </script>
+</body>
+</html>
