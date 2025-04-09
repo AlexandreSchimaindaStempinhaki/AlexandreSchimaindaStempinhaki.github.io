@@ -8,6 +8,7 @@ html, body{
 }
 
 body{
+
     display: grid;
 
     grid-auto-rows: 1fr 1fr;
@@ -37,7 +38,10 @@ body{
         scale: 1.25;
     }
     body{
-        position: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
