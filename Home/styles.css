@@ -47,15 +47,15 @@ main{
 }
 
 #atividades{
+    display: flex;
+    justify-content: center;
     position: absolute;
     margin-top: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 30vw;
     height: 50vh;
     background-color: #00008B;
     border: 5px solid #000000;
+    overflow-y: auto;
 }
 
 .menu-lateral{
@@ -66,8 +66,8 @@ main{
 li{
     display: flex;
     align-items: center;
-    padding-top: 2.5vh;
-    padding-bottom: 2.5vh;
+    padding-top: 3vh;
+    min-width: 25vw;
     background-color: #00008B;
     border-bottom: 5px solid #000000;
     cursor: pointer;
