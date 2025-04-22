@@ -1,0 +1,8 @@
+body{
+    margin: 0px;
+}
+
+header{
+    background-image: linear-gradient(to right, #232397, #d4eaf2);
+    height:100px;
+}

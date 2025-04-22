@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel = "stylesheet" href = "login.css">
+</head>
+<body>
+    <div id = "login">
+        <table>
+            <tr>
+                <td>
+                    <h1 id = "titulo" >Authentication</h1>
+                </td>      
+            </tr>
+            <tr>
+                <td>
+                    <h2 id = "sub-titulo">Enter your credentials</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                    <h3 id = "texto">E-mail</h3>
+                </td>
+            </tr>
+                <td>
+                    <form>
+                        <input class = "text-field" type = "text" id = "email" name = "email">
+                    </form>
+                </td>
+            <tr>
+                <td>
+                    <br>
+                    <h3 id = "texto">Password</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        <input class = "text-field" type = "text" id = "password" name = "password">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                    
+                    <a class = "botao" href="home.html">Authenticate</a>
+                        <a id = "senha" href = "">Forget your password?</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <img class = "sociais" src = "images/Google.png">
+                    <img class = "sociais" src = "images/Facebook.png">
+                    <img class = "sociais" src = "images/Twitter.png">
+                </td>
+            </tr>
+        </table>
+                
+    </div>
+    <div id = "imagem">
+        <img id = "escudo" src = "images/Icon.png">
+    </div>
+
+    <script>
+        function redirecionar(endereco){
+            window.location.href = endereco;
+        }
+    </script>
+</body>
+</html>
