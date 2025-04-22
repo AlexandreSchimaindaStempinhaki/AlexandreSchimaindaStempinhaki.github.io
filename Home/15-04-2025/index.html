@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "menu">
+        <h1 id = "titulo">SIMULADOR</h1>
+        <h2 id = "subtitulo">FlexBox</h2>
+        <h3 id = "texto">Preenchimento</h3>
+        
+        <div class = "grades">
+            <div class = "item" id = "cor1" onclick = "colorChange(this)"></div>
+            <div class = "item" id = "cor2" onclick = "colorChange(this)"></div>
+            <div class = "item" id = "cor3" onclick = "colorChange(this)"></div>
+            <div class = "item" id = "cor4" onclick = "colorChange(this)"></div>
+            <div class = "item" id = "cor5" onclick = "colorChange(this)"></div>
+            <div class = "item" id = "cor6" onclick = "colorChange(this)"></div>
+        </div>
+
+        <h3 id = "texto">Formato</h3>
+
+        <div class = "grades">
+            <div class = "formato" id = "quadrado" onclick = "radiusChange(this)"></div>
+            <div class = "formato" id = "circulo" onclick = "radiusChange(this)"></div>
+        </div>
+
+        <h3 id = "texto">Tamanho</h3>
+        <input type = "number" id = "tamanho" min = "50" max = "200" value = "100" step = "10" onchange = "sizeChange(this)">
+        
+        <h3 id = "texto">Alinhamento</h3>
+        <select class = "caixa" onchange = "flexChange(this, 'Flex-Direction')">
+            <option value = "0" selected>FLEX-DIRECTION</option>
+            <option value = "row">Row</option>
+            <option value = "column">Column</option>
+            <option value = "row-reverse">Row-Reverse</option>
+            <option value = "column-reverse">Column-Reverse</option>
+        </select>
+        <select class = "caixa" onchange = "flexChange(this, 'Justify-Content')">
+            <option value = "0" selected>JUSTIFY-CONTENT</option>
+            <option value = "center">Center</option>
+            <option value = "flex-start">Flex-Start</option>
+            <option value = "flex-end">Flex-End</option>
+            <option value = "space-around">Space-Around</option>
+            <option value = "space-between">Space-Between</option>
+            <option value = "space-evenly">Space-Evenly</option>
+        </select>
+
+        <select class = "caixa" onchange = "flexChange(this, 'Align-Items')">
+            <option value = "0" selected>ALIGN-ITEMS</option>
+            <option value = "center">Center</option>
+            <option value = "flex-start">Flex-Start</option>
+            <option value = "flex-end">Flex-End</option>
+            <option value = "stretch">Stretch</option>
+            <option value = "baseline">Baseline</option>
+        </select>
+
+
+    </div>
+    <div class = "campo">
+        <div class = "quadradao"><h1 id = "texto"><div>1</div></h1></div>
+        <div class = "quadradao"><h1 id = "texto"><div>2</div></h1></div>
+        <div class = "quadradao"><h1 id = "texto"><div>3</div></h1></div>
+
+    </div>
+
+    <script src = "script.js"></script>
+</body>
+</html>

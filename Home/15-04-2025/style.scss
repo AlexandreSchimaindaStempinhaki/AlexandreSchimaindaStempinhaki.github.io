@@ -1,0 +1,132 @@
+$cor-fonte: #474A51;
+
+:root{
+    --cor-selecionada: darkblue;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25vw;
+        background-color: lightgray;
+        #titulo{
+            margin-top: 1.4vh;
+            font-size: 2.25vw;
+            color: $cor-fonte;
+        }
+        #subtitulo{
+            font-size: 2.1vw;
+            color: $cor-fonte;
+        }
+        #texto{
+            font-size: 1.8vw;
+            color: $cor-fonte;
+            margin-top: 1.8vh;
+        }
+    }
+
+    .grades{
+        width: 13vw;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1vw;
+
+        .item{
+            width: 2.3vw;
+            height: 2.3vw;
+            margin: 0.25vw;
+            border: 0.4vw solid transparent;
+        }
+
+        #cor1{
+            @extend .item;
+            background-color: darkblue;
+            border-color: #474A51;
+        }
+        #cor2{
+            @extend .item;
+            background-color: green;
+        }
+        #cor3{
+            @extend .item;
+            background-color: purple;
+        }
+        #cor4{
+            @extend .item;
+            background-color: lightblue;
+        }
+        #cor5{
+            @extend .item;
+            background-color: lightgreen;
+        }
+        #cor6{
+            @extend .item;
+            background-color: darkred;
+        }
+
+        #quadrado{
+            @extend .item;
+            background-color: var(--cor-selecionada);
+            border-color: $cor-fonte;
+            transition: background-color 1s ease;
+        }
+
+        #circulo{
+            @extend .item;
+            background-color: var(--cor-selecionada);
+            border-radius: 50%;
+            transition: background-color 1s ease;
+        }
+    }
+
+    #tamanho{
+        width: 15vw;
+        height: 5vh;
+        border: 0.2vw solid black;
+        border-radius: 5px;
+        font-size: 1.6vw;
+        margin-top: 1vh;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .caixa{
+        @extend #tamanho;
+        font-weight: none;
+        font-size: 1.3vw;
+    }
+
+
+    .campo{
+        display: flex;
+        flex: 1;
+        .quadradao{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            margin: 1vw;
+            border: 0.5vw solid $cor-fonte;
+            background-color: var(--cor-selecionada);
+            transition: background-color 1s ease, border-radius 1s ease, width 1s ease, height 1s ease;
+
+            #texto{
+                font-size: 3vw;
+                color: $cor-fonte;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+:root {
+  --cor-selecionada: darkblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+body .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  background-color: lightgray;
+}
+body .menu #titulo {
+  margin-top: 1.4vh;
+  font-size: 2.25vw;
+  color: #474A51;
+}
+body .menu #subtitulo {
+  font-size: 2.1vw;
+  color: #474A51;
+}
+body .menu #texto {
+  font-size: 1.8vw;
+  color: #474A51;
+  margin-top: 1.8vh;
+}
+body .grades {
+  width: 13vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1vw;
+}
+body .grades .item, body .grades #circulo, body .grades #quadrado, body .grades #cor6, body .grades #cor5, body .grades #cor4, body .grades #cor3, body .grades #cor2, body .grades #cor1 {
+  width: 2.3vw;
+  height: 2.3vw;
+  margin: 0.25vw;
+  border: 0.4vw solid transparent;
+}
+body .grades #cor1 {
+  background-color: darkblue;
+  border-color: #474A51;
+}
+body .grades #cor2 {
+  background-color: green;
+}
+body .grades #cor3 {
+  background-color: purple;
+}
+body .grades #cor4 {
+  background-color: lightblue;
+}
+body .grades #cor5 {
+  background-color: lightgreen;
+}
+body .grades #cor6 {
+  background-color: darkred;
+}
+body .grades #quadrado {
+  background-color: var(--cor-selecionada);
+  border-color: #474A51;
+  transition: background-color 1s ease;
+}
+body .grades #circulo {
+  background-color: var(--cor-selecionada);
+  border-radius: 50%;
+  transition: background-color 1s ease;
+}
+body #tamanho, body .caixa {
+  width: 15vw;
+  height: 5vh;
+  border: 0.2vw solid black;
+  border-radius: 5px;
+  font-size: 1.6vw;
+  margin-top: 1vh;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body .caixa {
+  font-weight: none;
+  font-size: 1.3vw;
+}
+body .campo {
+  display: flex;
+  flex: 1;
+}
+body .campo .quadradao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 1vw;
+  border: 0.5vw solid #474A51;
+  background-color: var(--cor-selecionada);
+  transition: background-color 1s ease, border-radius 1s ease, width 1s ease, height 1s ease;
+}
+body .campo .quadradao #texto {
+  font-size: 3vw;
+  color: #474A51;
+}/*# sourceMappingURL=style.css.map */
