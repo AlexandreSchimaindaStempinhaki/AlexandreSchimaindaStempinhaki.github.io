@@ -2,70 +2,56 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 
-
-
-    <title>Dashboard</title>
+  <title>Dashboard</title>
 </head>
-
-<body>
-
-    <div class="row bg-dark p-3 m-0 p-0 d-flex align-items-center"
-        style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
-        <div class="col-2 text-end">
-            <img src="images/IFPR.png" class="w-50 h-100 rounded-circle">
-        </div>
-        <div class="col-2 m-0 p-0 d-flex justify-content-center">
-            <button type="button" class="position-relative btn bg-light text-secondary border-secondary rounded"
-                style="border-width : 3px; width: 60%;">
-                Novos Dados
-                <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger">
-                    57
-                </span>
-            </button>
-        </div>
-        <div class="col-2 m-0 p-0">
-            <select class="form-select bg-light border-secondary rounded w-75" style="border-width : 3px; width: 60%;">
-                <option selected> Anual</option>
-                <option> Semestral</option>
-                <option> Mensal</option>
-            </select>
-        </div>
-
-        <div class="col-1 m-0 p-0 form-check d-flex flex-column">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="marcar1">
-                <label class="form-check-label text-light" for="marcar1">
-                    Servidores
-                </label>
+    <body>
+        <nav class = "navbar navbar-expand-lg bg-dark borda-nav">
+            <div class = "container d-flex align-items-center">
+                <ul class = "navbar-nav d-flex flex-row align-items-center">
+                    <li class = "nav-item">
+                        <img src = "images/IFPR.png" class = "rounded-circle" style = "height: 10vh; margin-left: 6vw;">
+                    </li>
+                    <li class = "nav-item">
+                        <button class = "btn btn-light rounded-1 borda-botao border-secondary ms-4">Novos Dados</button>
+                    </li>
+                    <li class = "nav-item">
+                        <select class = "btn btn-light rounded-1 borda-botao border-secondary ms-4 text-start">
+                            <option selected>Anual</option>
+                            <option>Semetral</option>
+                            <option>Mensal</option>
+                        </select>
+                    </li>
+                    <li class = "nav-item ms-3 d-flex flex-column">
+                        <div>
+                            <input type = "checkbox" name = "servidores" id = "servidores">
+                            <label for = "servidores" class = "text-light">Servidores</label>
+                        </div>
+                        <div>
+                            <input type = "checkbox" name = "estudantes" id = "estudantes">
+                            <label for = "estudantes" class = "text-light">Estudantes</label>
+                        </div>
+                    </li>
+                    <li class = "nav-item ms-3 d-flex flex-column">
+                        <input type = "color" class = "form-control form-control-color" id = "exampleColorInput"
+                        value = "00000" title = "Choose Your Color" style = "width: 4vw;">
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link.dropdown-toggle" href = "">Mais</a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="marcar2">
-                <label class="form-check-label text-light" for="marcar2">
-                    Estudantes
-                </label>
-            </div>
-        </div>
-
-        <div class="col-1 m-0 p-0">
-            <button type="button" class="d-flex justify-content-center align-items-center bg-secondary rounded w-50">
-                <div class = "col-12 bg-light rounded text-light">a</div>
-            </button>   
-        </div>
-
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-</body>
-
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+        </script>
+    </body>
 </html>
