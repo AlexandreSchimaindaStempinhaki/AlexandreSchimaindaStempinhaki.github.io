@@ -1,9 +1,42 @@
-.borda-nav{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #dcdcdc;
+}
+.nav-bar{
+    height: 15vh;
     border-bottom-left-radius: 10vw;
     border-bottom-right-radius: 10vw;
 }
 
-.borda-botao{
-    width: 9xvw;
-    border-width: 3px;
+.botoes{
+    width: 12vw;
+    height: 7.5vh;
+    font-size: 1.5vw;
+}
+
+.barra{
+    appearance: none;
+    background-color: #e1e6eb;
+    height: 1.5vh;
+}
+
+th{
+    text-align: center;
+}
+
+li{
+    text-align: start;
+    list-style-type: none;
+    line-height: 1;
+    font-size: 1.5vw;
+}
+
+.mapa{
+    display: flex;
+    align-items: center;
 }
