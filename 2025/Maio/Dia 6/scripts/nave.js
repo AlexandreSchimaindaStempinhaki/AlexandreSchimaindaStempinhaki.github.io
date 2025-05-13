@@ -95,3 +95,9 @@ function dispararMissel(e){
 
 document.addEventListener('keydown', dispararMissel);
 
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'p' || e.key === 'P'){
+        jogoPausado = !jogoPausado;
+    }
+})
+
