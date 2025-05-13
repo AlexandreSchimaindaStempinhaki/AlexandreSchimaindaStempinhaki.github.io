@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    background-image: url(images/Fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#pausado{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.4;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    font-size: 3vw;
+    display: none;
+}
+
+#status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 18vw;
+    height: 40vh;
+    background-color: black;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    opacity: 0.8;
+    border: 0.25vw solid white;
+    box-shadow: 0.25vw 0.25vw 5px white;
+}
+
+.divisao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50%;
+    height: 33.33%
+}
+
+.icone{
+    width: 3vw;
+    height: auto;
+}
+
+.text-menu{
+    font-size: 1.5vw;
+    color: white;
+}
+
+
+.container{
+    position: absolute;
+    left: 50%;
+    bottom: 0.5vw;
+    transform: translateX(-50%);
+}
+
+#nave{
+    position: relative;
+    left: 0px;
+    right: 0px;
+    height: 25vh;
+    width: auto;
+}
+
+.missil{
+    position: absolute;
+    height: 13vh;
+    width: auto;
+    bottom: 3vw;
+}
+
+.missil.esquerda{
+    left: 0.5vw;
+    z-index: -1;
+}
+
+.missil.direita{
+    right: 0.5vw;
+    z-index: -1;
+}
