@@ -15,7 +15,7 @@ body{
     overflow: hidden;
 }
 
-#pausado{
+.aviso{
     position: fixed;
     display: flex;
     align-items: center;
@@ -96,4 +96,24 @@ body{
 .missil.direita{
     right: 0.5vw;
     z-index: -1;
+}
+
+.alien{
+    position: fixed;
+    width: 12.5vw;
+    height: auto;
+    bottom: 90%;
+    transform: 0.3s ease;
+}
+
+.alien.esquerda{
+    left: 25vw;
+}
+
+.alien.meio{
+    left: 43.75vw;
+}
+
+.alien.direita{
+    left: 62.5vw;
 }

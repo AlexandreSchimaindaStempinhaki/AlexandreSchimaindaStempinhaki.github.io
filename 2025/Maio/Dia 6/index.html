@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id = "pausado">GAME PAUSED</div>
+    <div class = "aviso" id = "pausado">GAME PAUSED</div>
+    <div class = "aviso" id = "perder">YOU LOSE</div>
+    <div class = "aviso" id = "gameover">GAME OVER</div>
+
     <div id = "status">
         <div class = "divisao"> <img class = "icone" src = "images/timer.png" alt = "relogio"> </div>
         <div class = "divisao"> <h1 class = "text-menu" id = "cronometro">00:00:00</h1> </div>
         <div class = "divisao"> <img class = "icone" src = "images/nave.png" alt = "nave"> </div>
-        <div class = "divisao"> <h1 class = "text-menu">LIFE: 3</h1> </div>
+        <div class = "divisao"> <h1 class = "text-menu" id = "vidas">LIFE: 3</h1> </div>
         <div class = "divisao"> <img class = "icone" src = "images/alien.png" alt = "alien"> </div>
         <div class = "divisao"> <h1 class = "text-menu">ALIEN: 0</h1> </div>
     </div>
+
+    <img class = "alien esquerda" src = "images/alien.png">
+    <img class = "alien meio" src = "images/alien.png">
+    <img class = "alien direita" src = "images/alien.png">
 
     <div class = "container">
         <img id = "nave" src = "images/nave.png">
@@ -23,8 +30,7 @@
         <img class = "missil direita" src = "images/missil.png">
     </div>
 
-    <script src = "scripts/temporizador.js"></script>
-    <script src = "scripts/nave.js"></script>
+    <script src = "scripts/script.js"></script>
 
 </body>
 </html>
