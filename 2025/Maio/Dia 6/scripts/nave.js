@@ -53,6 +53,8 @@ const alturaMaxima = 87;
 const dispararMissil = (missil, alturaInicial, aoFinalizar) => {
     let altura = alturaInicial;
     const intervalo = setInterval(() => {
+        if(jogoPausado) {return};
+        
         if(altura >= alturaMaxima){
             clearInterval(intervalo);
             missil.style.bottom = `${alturaMaxima}vh`;
