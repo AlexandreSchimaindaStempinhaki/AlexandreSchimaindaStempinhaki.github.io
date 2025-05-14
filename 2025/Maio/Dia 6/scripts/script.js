@@ -144,7 +144,7 @@ document.addEventListener('keydown', dispararMissel);
 
 
 function moverAliens() {
-  const saida = 90;
+  const saida = 100;
   const chegada = 20;
   const velocidade = 0.25 * fase;
   let derrota = false;
