@@ -1,4 +1,4 @@
-const data_subjects = []
+var data_subjects = []
 
 function newAssunto(){
     const form = document.getElementById('formSubjected');
@@ -11,7 +11,7 @@ function newAssunto(){
         id: data_subjects.length,
         nome: input_nome.value
     }
-
+    
     data_subjects.push(newSubject);
 
 
@@ -35,4 +35,6 @@ function newAssunto(){
     option.value = newSubject.id;
     option.textContent = newSubject.nome;
     select.appendChild(option);
+
+    drawChart();
 }
